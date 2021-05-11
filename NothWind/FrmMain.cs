@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NothWind.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,29 @@ namespace NothWind
         public FrmMain()
         {
             InitializeComponent();
+        }
+        void List()
+        {
+            using (NorthWindContext context = new NorthWindContext())
+            {
+                dgwProduct.DataSource = context.Products.ToList();
+
+            }
+        }
+        void ConfigureCombos()
+        {
+            using (NorthWindContext context = new NorthWindContext())
+            {
+                cmbCategory.DataSource = context.Categories.ToList();
+                cmbCategory.DisplayMember = "CategoryName";
+                cmbCategory.ValueMember = "CategoryID";
+
+            }
+        }
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            List();
+            ConfigureCombos();
         }
     }
 }

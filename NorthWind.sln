@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1401
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NothWind", "NothWind\NothWind.csproj", "{1AEA9021-51FC-4CFD-9A9B-FA9E5969F446}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind", "NothWind\NorthWind.csproj", "{1AEA9021-51FC-4CFD-9A9B-FA9E5969F446}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
