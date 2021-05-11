@@ -36,12 +36,12 @@ namespace NothWind
                 
             }
         }
-        void List(string productName)
+        void List(string productName, int categoryID)
         {
             using (NorthWindContext context = new NorthWindContext())
             {
                 //to avoid being affected by case sensitivity.
-                dgwProduct.DataSource = context.Products.Where(x => x.ProductName.ToLower().Contains(productName.ToLower())).ToList();
+                dgwProduct.DataSource = context.Products.Where(x => x.ProductName.ToLower().Contains(productName.ToLower()) && x.CategoryID == categoryID).ToList();
 
             }
         }
@@ -83,7 +83,7 @@ namespace NothWind
             }
             else
             {
-                List(txtSearch.Text);
+                List(txtSearch.Text,Convert.ToInt32(cmbCategory.SelectedValue));
             }
         }
 
